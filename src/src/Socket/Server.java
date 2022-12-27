@@ -1,5 +1,7 @@
 package Socket;
 
+import GUI.ChatBoxPanel;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,6 +17,8 @@ public class Server extends Thread{
 
     public Server(Socket Socket) {
         this.Socket = Socket;
+
+
     }
 
     public void runServer(String msg) throws IOException {
@@ -22,7 +26,6 @@ public class Server extends Thread{
         Socket = serverSocket.accept();
         out = new PrintWriter(Socket.getOutputStream());
         in = new BufferedReader (new InputStreamReader(Socket.getInputStream()));
-        sender(msg);
 
     }
 
@@ -35,10 +38,33 @@ public class Server extends Thread{
                     msg=msg;
                     out.println(msg);    // write data stored in msg in the clientSocket
                     out.flush();   // forces the sending of the data
+                    ChatBoxPanel.ChatBoxUpdate(msg);
                 }
             }
         });
         sender.start();
+    }
+
+    public void receiver(){
+        Thread receiver = new Thread(new Runnable() {
+            String msg;
+            @Override
+            public void run() {
+                try {
+                    msg = in.readLine();
+                    while(msg!=null){
+                        System.out.println("Server : "+msg);
+                        msg = in.readLine();
+                        ChatBoxPanel.ChatBoxUpdate(msg);
+                    }
+                    out.close();
+                    Socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        receiver .start();
     }
 
 
