@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class EnterServerPage extends JFrame {
 
@@ -50,8 +51,7 @@ public class EnterServerPage extends JFrame {
         this.add(label_welcome);
 
 
-        BufferedImage myPicture = ImageIO.read(new File(
-                "/Users/serkangencer/IdeaProjects/Guess-me-/UI/src/images/guessMeLogo.png"));
+        BufferedImage myPicture = ImageIO.read(new URL("https://raw.githubusercontent.com/berkayacbay/Guess_Me/51765f3f37a61dd66dcedc6dbfd0500390593a7f/src/src/GUI/images/gameLogo/guessMeLogo.png?token=GHSAT0AAAAAAB35EYEV7E6LE3OPFNEZAU5AY5K74IQ"));
         BufferedImage scaledPic = resize(myPicture, 200, 200);
         JLabel picLabel = new JLabel(new ImageIcon(scaledPic));
         picLabel.setBackground(Color.orange);
