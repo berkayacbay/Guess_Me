@@ -1,3 +1,4 @@
+package GUI;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -7,17 +8,15 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class EnterServerPage extends JFrame {
+public class EnterGamePage extends JFrame {
 
-    JLabel label_welcome;
-    JButton JoinServerButton;
-    JTextField serverInput;
+    JLabel label_welcome, label_intro;
+    JButton HostGameButton,JoinServerButton;
 
-    EnterServerPage() throws IOException {
+    public EnterGamePage() throws IOException {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
-
         this.setTitle("Guess Me!");
         this.setLocationRelativeTo(null);
         this.setLayout(null);
@@ -28,18 +27,22 @@ public class EnterServerPage extends JFrame {
         label_welcome.setFont(new Font("Serif", Font.BOLD, 30));
         label_welcome.setForeground(Color.YELLOW);
 
-        serverInput = new JTextField();
-        serverInput.setBounds(300, 400, 200, 50);
-        serverInput.setForeground(Color.YELLOW);
-        serverInput.setEnabled(true);
+
+        HostGameButton = new JButton("HOST A GAME");
+        HostGameButton.setBounds(300, 400, 200, 50);
+       // HostGameButton.setBorderPainted(false);
+        HostGameButton.setForeground(Color.RED);
+        HostGameButton.setEnabled(true);
+        HostGameButton.addActionListener(new HostGameButton_Action());
 
 
-
-        JoinServerButton = new JButton("Host");
-        JoinServerButton.setBounds(500, 400, 50, 50);
-        JoinServerButton.setForeground(Color.BLACK);
+        JoinServerButton = new JButton("JOIN A SERVER");
+        JoinServerButton.setBounds(300, 500, 200, 50);
+       // JoinServerButton.setBorderPainted(false);
+        JoinServerButton.setForeground(Color.RED);
         JoinServerButton.setEnabled(true);
-        JoinServerButton.addActionListener(new ServerButton_Action());
+        JoinServerButton.addActionListener(new JoinServerButton_Action());
+
 
 
 
@@ -47,6 +50,7 @@ public class EnterServerPage extends JFrame {
 
 
         this.add(label_welcome);
+
 
 
         BufferedImage myPicture = ImageIO.read(new File(
@@ -59,8 +63,8 @@ public class EnterServerPage extends JFrame {
         picLabel.setBounds(300, 100, 200, 200);
         this.add(picLabel, SwingConstants.CENTER);
         this.getContentPane().setBackground(Color.ORANGE);
+        this.add(HostGameButton);
         this.add(JoinServerButton);
-        this.add(serverInput);
         //this.add(panel);
 
         //this.getContentPane().get
@@ -80,18 +84,23 @@ public class EnterServerPage extends JFrame {
 
         return dimg;
     }
-    public static void run() throws IOException {
-        new EnterServerPage().setVisible(true);
-    }
 
-
-
-    static class ServerButton_Action implements ActionListener {
+    static class HostGameButton_Action implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
-    //TODO: Write server ID here, open the specific server accordingly
             MainPage.run();
 
+
+
+        }
+    }
+
+    static class JoinServerButton_Action implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            try {
+                EnterServerPage.run();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
 
 
         }
