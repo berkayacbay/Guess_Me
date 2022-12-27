@@ -1,3 +1,4 @@
+package GUI;
 import javax.swing.*;
 
 public class MainPage extends javax.swing.JFrame {
