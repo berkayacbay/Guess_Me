@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class EnterServerPage extends JFrame {
 
-    JLabel label_welcome, label_intro;
+    JLabel label_welcome;
     JButton JoinServerButton;
     JTextField serverInput;
 
