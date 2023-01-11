@@ -43,7 +43,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton Anita;
     
     private javax.swing.JPanel ChatBoxPanel;
-    private javax.swing.JPanel Chatbox;
+    private javax.swing.JTextField Chatbox;
     
     
     private int NUM_Guess=3;
@@ -57,7 +57,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel GuessesLeft_label;
     private javax.swing.JButton SendText;
     private javax.swing.JLabel chatHistory;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel you_label;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel yourCharImageLabel;
     private javax.swing.JLabel yourCharNameLabel;
@@ -86,7 +86,7 @@ public class MainPage extends javax.swing.JFrame {
         Peter = new javax.swing.JButton();
         David = new javax.swing.JButton();
         yourCharImageLabel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        you_label = new javax.swing.JLabel();
         Susan_RBut = new javax.swing.JRadioButton();
         Max_RBut = new javax.swing.JRadioButton();
         Paul_RBut = new javax.swing.JRadioButton();
@@ -104,7 +104,7 @@ public class MainPage extends javax.swing.JFrame {
         Charles_RBut = new javax.swing.JRadioButton();
         Philip_RBut = new javax.swing.JRadioButton();
         ChatBoxPanel = new javax.swing.JPanel();
-        Chatbox = new javax.swing.JPanel();
+        Chatbox = new javax.swing.JTextField();
         chatHistory = new javax.swing.JLabel();
         Q_Yes = new javax.swing.JButton();
         SendText = new javax.swing.JButton();
@@ -120,8 +120,20 @@ public class MainPage extends javax.swing.JFrame {
 
 
         Max.setText("Max");
+
         Max.addActionListener(new java.awt.event.ActionListener() {
+            int count=0;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Max.setText("abc");
+                }
+                else{
+
+                    Max.setText("Max");
+
+                }
+
 
             }
         });
@@ -243,9 +255,9 @@ public class MainPage extends javax.swing.JFrame {
         );
 
 
-        jLabel1.setFont(new java.awt.Font("Phosphate", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel1.setText("You");
+        you_label.setFont(new java.awt.Font("Phosphate", 1, 18)); // NOI18N
+        you_label.setForeground(new java.awt.Color(255, 0, 51));
+        you_label.setText("You");
 
 
 //TODO: set names of characters on radiobuttons
@@ -287,6 +299,7 @@ public class MainPage extends javax.swing.JFrame {
 
         Chatbox.setBackground(new java.awt.Color(255, 255, 255));
         Chatbox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
 
         javax.swing.GroupLayout ChatboxLayout = new javax.swing.GroupLayout(Chatbox);
         Chatbox.setLayout(ChatboxLayout);
@@ -351,6 +364,8 @@ public class MainPage extends javax.swing.JFrame {
         SendText.setFont(new java.awt.Font("Rockwell", 1, 13)); // NOI18N
         SendText.setForeground(new java.awt.Color(153, 255, 255));
         SendText.setText("SEND");
+
+
 
 
 
@@ -443,7 +458,7 @@ public class MainPage extends javax.swing.JFrame {
                                                         .addComponent(yourCharImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(yourCharNameLabel))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel1)
+                                                .addComponent(you_label)
                                                 .addGap(38, 38, 38)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -566,7 +581,7 @@ public class MainPage extends javax.swing.JFrame {
                                                 .addGap(21, 21, 21)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(yourCharImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                        .addComponent(you_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(yourCharNameLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
