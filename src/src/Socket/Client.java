@@ -66,6 +66,7 @@ public class Client {
                     MainPage.chatHistory.setText(AllChat);
                     //   a.soru.setText(message);
                     //    MainPage.chatHistory.set
+                    break;
                 }
             }
         });

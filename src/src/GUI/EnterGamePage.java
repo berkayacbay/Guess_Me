@@ -54,14 +54,14 @@ public class EnterGamePage extends JFrame {
 
         //TODO: image not shown.
 
-        //BufferedImage myPicture = ImageIO.read(new URL(null));
-        //BufferedImage scaledPic = resize(myPicture, 200, 200);
-        //JLabel picLabel = new JLabel(new ImageIcon(scaledPic));
-       // picLabel.setBackground(Color.orange);
-        //picLabel.setOpaque(true);
-       // picLabel.setBorder(BorderFactory.createLineBorder(Color.ORANGE));
-       // picLabel.setBounds(300, 100, 200, 200);
-       // this.add(picLabel, SwingConstants.CENTER);
+       // BufferedImage myPicture = ImageIO.read(new URL("https://raw.githubusercontent.com/berkayacbay/Guess_Me/51765f3f37a61dd66dcedc6dbfd0500390593a7f/src/src/GUI/images/gameLogo/guessMeLogo.png?token=GHSAT0AAAAAAB35EYEV7E6LE3OPFNEZAU5AY5K74IQ"));
+        // BufferedImage scaledPic = resize(myPicture, 200, 200);
+        JLabel picLabel = new JLabel();
+        picLabel.setBackground(Color.orange);
+        picLabel.setOpaque(true);
+        picLabel.setBorder(BorderFactory.createLineBorder(Color.ORANGE));
+        picLabel.setBounds(300, 100, 200, 200);
+        this.add(picLabel, SwingConstants.CENTER);
         this.getContentPane().setBackground(Color.ORANGE);
         this.add(HostGameButton);
         this.add(JoinServerButton);
