@@ -1,8 +1,6 @@
 package GUI;
 import Socket.Client;
-
-import javax.swing.*;
-import java.awt.*;
+import Socket.Game;
 
 public class MainPage extends javax.swing.JFrame {
 
@@ -152,6 +150,27 @@ public class MainPage extends javax.swing.JFrame {
                String chat= Chatbox.getText();
                 Client.send(chat);
                 Chatbox.setText("");
+            }
+        });
+        Q_No.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+                Chatbox.setText("/No ");
+            }
+        });
+        Q_Yes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+                Chatbox.setText("/Yes ");
+            }
+        });
+        Q_Assumption.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                if(Game.chanceToAssumption>0) {
+                    Chatbox.setText("/Assumption ");
+                    NUM_Guess--;
+                    NUM_Guess_Label.setText(String.valueOf(NUM_Guess));
+                }
             }
         });
 

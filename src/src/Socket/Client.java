@@ -6,7 +6,7 @@ import java.io.*;
 import java.net.*;
 
 public class Client {
-    public static String AllChat;
+    public static String AllChat="";
     private static DataOutputStream out;
     private static DataInputStream in;
     private static Socket socket;
@@ -50,7 +50,7 @@ public class Client {
             @Override
             public void run() {
                 while(true){
-                    String message = null;
+                    String message;
                     message =Sender_msg;
                     AllChat=AllChat+message;
                     try {

@@ -1,13 +1,16 @@
+package Socket;
+
 public class Game {
     private String receivemessage;
-    private int chanceToAssumption = 3; // == 0 --> Assumption tuşuna basınca chate yazma !!!
+
+
+
+    public static int chanceToAssumption = 3; // == 0 --> Assumption tuşuna basınca chate yazma !!!
     private boolean guessMode = false;
     private boolean IsGameWon = false;
 
 
-    public boolean canGuess() {
-        return chanceToAssumption > 0;
-    }
+
 
     public void examineMessage() {
         if (receivemessage.startsWith("/Assumption")) {
