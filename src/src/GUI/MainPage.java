@@ -1,4 +1,6 @@
 package GUI;
+import Socket.Client;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -56,7 +58,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton Q_Yes;
     private javax.swing.JLabel GuessesLeft_label;
     private javax.swing.JButton SendText;
-    private javax.swing.JLabel chatHistory;
+    public static javax.swing.JLabel chatHistory;
     private javax.swing.JLabel you_label;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel yourCharImageLabel;
@@ -142,6 +144,14 @@ public class MainPage extends javax.swing.JFrame {
         Paul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
+            }
+        });
+
+       SendText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+               String chat= Chatbox.getText();
+                Client.send(chat);
+                Chatbox.setText("");
             }
         });
 

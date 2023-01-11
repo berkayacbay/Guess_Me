@@ -15,36 +15,7 @@ public class Client {
         socket = new Socket("3.121.247.252", 100);
         out= new DataOutputStream(socket.getOutputStream());
         in= new DataInputStream(socket.getInputStream());
-        Thread sender = new Thread(new Runnable() {
-            String msg;
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            @Override
-            public void run() {
-                while(true){
-                    String message = null;
-                    try {
-                        message = reader.readLine();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    AllChat=AllChat+message;
-                    try {
-                        out.writeUTF(message);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    try {
-                        out.flush();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    MainPage.chatHistory.setText(AllChat);
-                 //   a.soru.setText(message);
-                //    MainPage.chatHistory.set
-                }
-            }
-        });
-        sender.start();
+
 
 
         Thread receiver = new Thread(new Runnable() {
@@ -70,6 +41,35 @@ public class Client {
             }
         });
         receiver.start();
+    }
+
+    public static  void send(String Sender_msg){
+        Thread sender = new Thread(new Runnable() {
+            String msg;
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            @Override
+            public void run() {
+                while(true){
+                    String message = null;
+                    message =Sender_msg;
+                    AllChat=AllChat+message;
+                    try {
+                        out.writeUTF(message);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        out.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    MainPage.chatHistory.setText(AllChat);
+                    //   a.soru.setText(message);
+                    //    MainPage.chatHistory.set
+                }
+            }
+        });
+        sender.start();
     }
 
 }
