@@ -1,53 +1,62 @@
 package Socket;
 
-import GUI.ChatBoxPanel;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 
 public class Client {
-    private Socket Socket; // socket used by client to send and recieve data from server
-    private BufferedReader in;   // object to read data from socket
-    private PrintWriter out;
-
-
-    public Client(String ip) throws IOException {
-        Socket = new Socket(ip, 5000);
-        out = new PrintWriter(Socket.getOutputStream());
-        in = new BufferedReader(new InputStreamReader(Socket.getInputStream()));
-    }
-
-    public void Send (String msg){
+    public static String cevap="";
+    public static String soru="";
+    private static DataOutputStream out;
+    private static DataInputStream in;
+    private static Socket socket;
+    public Client() throws IOException {
+        socket = new Socket("3.121.247.252", 100);
+        out= new DataOutputStream(socket.getOutputStream());
+        in= new DataInputStream(socket.getInputStream());
         Thread sender = new Thread(new Runnable() {
+            String msg;
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             @Override
             public void run() {
-                while (true) {
-                    out.println(msg);
-                    out.flush();
+                while(true){
+                    String message = null;
+                    try {
+                        message = reader.readLine();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    soru=soru+message;
+                    try {
+                        out.writeUTF(message);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        out.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                 //   a.soru.setText(message);
                 }
             }
         });
         sender.start();
-    }
 
-    public void receiver () {
+
         Thread receiver = new Thread(new Runnable() {
             String msg;
-
             @Override
             public void run() {
                 try {
-                    msg = in.readLine();
-                    while (msg != null) {
-                        System.out.println("Server : " + msg);
-                        msg = in.readLine();
-                        ChatBoxPanel.ChatBoxUpdate(msg);
+                    msg = in.readUTF();
+                    while(msg!=null){
+                        cevap=cevap+msg;
+                   //     a.cevap.setText(cevap);
+                        msg = in.readUTF();
                     }
+                    System.out.println("Server out of service");
                     out.close();
-                    Socket.close();
+                    socket.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -55,4 +64,5 @@ public class Client {
         });
         receiver.start();
     }
+
 }
