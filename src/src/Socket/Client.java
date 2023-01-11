@@ -1,14 +1,16 @@
 package Socket;
 
+import GUI.MainPage;
+
 import java.io.*;
 import java.net.*;
 
 public class Client {
-    public static String cevap="";
-    public static String soru="";
+    public static String AllChat;
     private static DataOutputStream out;
     private static DataInputStream in;
     private static Socket socket;
+    public static String receivemessage;
     public Client() throws IOException {
         socket = new Socket("3.121.247.252", 100);
         out= new DataOutputStream(socket.getOutputStream());
@@ -25,7 +27,7 @@ public class Client {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    soru=soru+message;
+                    AllChat=AllChat+message;
                     try {
                         out.writeUTF(message);
                     } catch (IOException e) {
@@ -36,7 +38,9 @@ public class Client {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    MainPage.chatHistory.setText(AllChat);
                  //   a.soru.setText(message);
+                //    MainPage.chatHistory.set
                 }
             }
         });
@@ -49,10 +53,13 @@ public class Client {
             public void run() {
                 try {
                     msg = in.readUTF();
+                    receivemessage=msg;
                     while(msg!=null){
-                        cevap=cevap+msg;
+                        AllChat=AllChat+msg;
                    //     a.cevap.setText(cevap);
+                        MainPage.chatHistory.setText(AllChat);
                         msg = in.readUTF();
+                        receivemessage=msg;
                     }
                     System.out.println("Server out of service");
                     out.close();
