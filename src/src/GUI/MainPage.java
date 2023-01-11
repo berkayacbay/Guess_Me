@@ -56,7 +56,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton Q_Yes;
     private javax.swing.JLabel GuessesLeft_label;
     private javax.swing.JButton SendText;
-    private javax.swing.JScrollPane chatHistory;
+    private javax.swing.JLabel chatHistory;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel yourCharImageLabel;
@@ -105,7 +105,7 @@ public class MainPage extends javax.swing.JFrame {
         Philip_RBut = new javax.swing.JRadioButton();
         ChatBoxPanel = new javax.swing.JPanel();
         Chatbox = new javax.swing.JPanel();
-        chatHistory = new javax.swing.JScrollPane();
+        chatHistory = new javax.swing.JLabel();
         Q_Yes = new javax.swing.JButton();
         SendText = new javax.swing.JButton();
         Q_No = new javax.swing.JButton();
