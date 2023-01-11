@@ -150,6 +150,8 @@ public class MainPage extends javax.swing.JFrame {
                String chat= Chatbox.getText();
                 Client.send(chat);
                 Chatbox.setText("");
+                NUM_Guess--;
+                NUM_Guess_Label.setText(String.valueOf(NUM_Guess));
             }
         });
         Q_No.addActionListener(new java.awt.event.ActionListener() {
@@ -168,8 +170,6 @@ public class MainPage extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 if(Game.chanceToAssumption>0) {
                     Chatbox.setText("/Assumption ");
-                    NUM_Guess--;
-                    NUM_Guess_Label.setText(String.valueOf(NUM_Guess));
                 }
             }
         });

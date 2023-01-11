@@ -73,7 +73,6 @@ public class Client {
         });
 
         sender.start();
-        game.examineMessage();
         game.continueGame();
     }
 
