@@ -12,7 +12,7 @@ import java.net.URL;
 public class EnterGamePage extends JFrame {
 
     JLabel label_welcome, label_intro;
-    JButton HostGameButton,JoinServerButton;
+    JButton HostGameButton;
 
     public EnterGamePage() throws IOException {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,14 +37,6 @@ public class EnterGamePage extends JFrame {
         HostGameButton.addActionListener(new HostGameButton_Action());
 
 
-        JoinServerButton = new JButton("JOIN A SERVER");
-        JoinServerButton.setBounds(300, 500, 200, 50);
-       // JoinServerButton.setBorderPainted(false);
-        JoinServerButton.setForeground(Color.RED);
-        JoinServerButton.setEnabled(true);
-        JoinServerButton.addActionListener(new JoinServerButton_Action());
-
-
 
 
 
@@ -54,9 +46,27 @@ public class EnterGamePage extends JFrame {
 
         //TODO: image not shown.
 
-       // BufferedImage myPicture = ImageIO.read(new URL("https://raw.githubusercontent.com/berkayacbay/Guess_Me/51765f3f37a61dd66dcedc6dbfd0500390593a7f/src/src/GUI/images/gameLogo/guessMeLogo.png?token=GHSAT0AAAAAAB35EYEV7E6LE3OPFNEZAU5AY5K74IQ"));
+
+
+
+
+
+
+
+
+        // BufferedImage myPicture = ImageIO.read(new URL("https://raw.githubusercontent.com/berkayacbay/Guess_Me/51765f3f37a61dd66dcedc6dbfd0500390593a7f/src/src/GUI/images/gameLogo/guessMeLogo.png?token=GHSAT0AAAAAAB35EYEV7E6LE3OPFNEZAU5AY5K74IQ"));
         // BufferedImage scaledPic = resize(myPicture, 200, 200);
-        JLabel picLabel = new JLabel();
+        JLabel picLabel=new JLabel();
+        ImageIcon image=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/gameLogo/guessMeLogo.png")
+                .getImage()
+                .getScaledInstance(200,200, Image.SCALE_DEFAULT));
+
+
+        picLabel.setSize(200,200);
+        picLabel.setIcon(image);
+
+
         picLabel.setBackground(Color.orange);
         picLabel.setOpaque(true);
         picLabel.setBorder(BorderFactory.createLineBorder(Color.ORANGE));
@@ -64,8 +74,8 @@ public class EnterGamePage extends JFrame {
         this.add(picLabel, SwingConstants.CENTER);
         this.getContentPane().setBackground(Color.ORANGE);
         this.add(HostGameButton);
-        this.add(JoinServerButton);
-        //this.add(panel);
+
+
 
         //this.getContentPane().get
 
@@ -74,16 +84,7 @@ public class EnterGamePage extends JFrame {
 
     }
 
-    public static BufferedImage resize(BufferedImage img, int newW, int newH) {
-        Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
-        BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_ARGB);
 
-        Graphics2D g2d = dimg.createGraphics();
-        g2d.drawImage(tmp, 0, 0, null);
-        g2d.dispose();
-
-        return dimg;
-    }
 
     static class HostGameButton_Action implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -94,17 +95,8 @@ public class EnterGamePage extends JFrame {
         }
     }
 
-    static class JoinServerButton_Action implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            try {
-                EnterServerPage.run();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
 
 
         }
-    }
 
-}
 

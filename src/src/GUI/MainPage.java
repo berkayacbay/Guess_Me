@@ -2,6 +2,8 @@ package GUI;
 import Socket.Client;
 import Socket.Game;
 
+import java.util.Random;
+
 public class MainPage extends javax.swing.JFrame {
 
     //RADIOBUTTONS TO FLAG THE CHARACTERS
@@ -274,14 +276,17 @@ public class MainPage extends javax.swing.JFrame {
 
         javax.swing.GroupLayout yourCharImageLabelLayout = new javax.swing.GroupLayout(yourCharImageLabel);
         yourCharImageLabel.setLayout(yourCharImageLabelLayout);
+
         yourCharImageLabelLayout.setHorizontalGroup(
                 yourCharImageLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 94, Short.MAX_VALUE)
         );
+
         yourCharImageLabelLayout.setVerticalGroup(
                 yourCharImageLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 100, Short.MAX_VALUE)
         );
+
 
 
         you_label.setFont(new java.awt.Font("Phosphate", 1, 18)); // NOI18N
@@ -461,9 +466,10 @@ public class MainPage extends javax.swing.JFrame {
 
 
         //TODO: SHOWS THE NAME OF THE RANDOMLY PICKED USER
-
+        randomCharacterGenerator();
         yourCharNameLabel.setForeground(new java.awt.Color(255, 51, 51));
-        yourCharNameLabel.setText("YournameLabel");
+
+
 
 
 
@@ -660,6 +666,84 @@ public class MainPage extends javax.swing.JFrame {
         );
 
         pack();
+    }
+
+    private void randomCharacterGenerator(){
+        Random rand=new Random();
+        int index=rand.nextInt(16);
+
+
+        switch(index) {
+            case 0:
+                // MAX
+                yourCharNameLabel.setText("Max");
+
+                break;
+            case 1:
+                // PAUL
+                yourCharNameLabel.setText("Paul");
+                break;
+            case 2:
+                // RICHARD
+                yourCharNameLabel.setText("Richard");
+                break;
+            case 3:
+                // SUSAN
+                yourCharNameLabel.setText("Susan");
+                break;
+            case 4:
+                //MARIA
+                yourCharNameLabel.setText("Maria");
+                break;
+            case 5:
+                // ERIC
+                yourCharNameLabel.setText("Eric");
+                break;
+            case 6:
+                // CLAIRE
+                yourCharNameLabel.setText("Claire");
+                break;
+            case 7:
+                // ANNE
+                yourCharNameLabel.setText("Anne");
+                break;
+            case 8:
+                // ANITA
+                yourCharNameLabel.setText("Anita");
+                break;
+            case 9:
+                // FRANS
+                yourCharNameLabel.setText("Frans");
+                break;
+            case 10:
+                // GEORGE
+                yourCharNameLabel.setText("George");
+                break;
+            case 11:
+                // TOM
+                yourCharNameLabel.setText("Tom");
+                break;
+            case 12:
+                // PHILIP
+                yourCharNameLabel.setText("Philip");
+                break;
+            case 13:
+                // PETER
+                yourCharNameLabel.setText("Peter");
+                break;
+            case 14:
+                // DAVID
+                yourCharNameLabel.setText("David");
+                break;
+            case 15:
+                // CHARLES
+                yourCharNameLabel.setText("Charles");
+                break;
+
+            default:
+                // NULL
+        }
+
     }
 
 
