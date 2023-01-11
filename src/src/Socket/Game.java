@@ -1,5 +1,7 @@
 package Socket;
 
+import javax.swing.*;
+
 public class Game {
     private String receivemessage;
 
@@ -28,6 +30,9 @@ public class Game {
     public void continueGame() {
         while (IsGameWon == false) {
             examineMessage();
+        }
+        if (IsGameWon){
+            JOptionPane.showMessageDialog(null,"GAME WON");
         }
     }
 }
