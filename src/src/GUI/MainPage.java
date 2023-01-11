@@ -1,51 +1,60 @@
 package GUI;
 import javax.swing.*;
+import java.awt.*;
 
 public class MainPage extends javax.swing.JFrame {
 
-
-    private javax.swing.JRadioButton Char10_RBut;
-    private javax.swing.JRadioButton Char11_RBut;
-    private javax.swing.JRadioButton Char12_RBut;
-    private javax.swing.JRadioButton Char13_RBut;
-    private javax.swing.JRadioButton Char14_RBut;
-    private javax.swing.JRadioButton Char15_RBut;
-    private javax.swing.JRadioButton Char16_RBut;
-    private javax.swing.JRadioButton Char1_RBut;
-    private javax.swing.JRadioButton Char2_RBut;
-    private javax.swing.JRadioButton Char3_RBut;
-    private javax.swing.JButton Char4;
-    private javax.swing.JRadioButton Char4_RBut;
-    private javax.swing.JRadioButton Char5_RBut;
-    private javax.swing.JRadioButton Char6_RBut;
-    private javax.swing.JRadioButton Char7_RBut;
-    private javax.swing.JRadioButton Char8_RBut;
-    private javax.swing.JRadioButton Char9_RBut;
-    private javax.swing.JButton CharBut_1;
-    private javax.swing.JButton CharBut_10;
-    private javax.swing.JButton CharBut_11;
-    private javax.swing.JButton CharBut_12;
-    private javax.swing.JButton CharBut_13;
-    private javax.swing.JButton CharBut_14;
-    private javax.swing.JButton CharBut_15;
-    private javax.swing.JButton CharBut_16;
-    private javax.swing.JButton CharBut_2;
-    private javax.swing.JButton CharBut_3;
-    private javax.swing.JButton CharBut_4;
-    private javax.swing.JButton CharBut_5;
-    private javax.swing.JButton CharBut_6;
-    private javax.swing.JButton CharBut_7;
-    private javax.swing.JButton CharBut_8;
-    private javax.swing.JButton CharBut_9;
+    //RADIOBUTTONS TO FLAG THE CHARACTERS
+    private javax.swing.JRadioButton Frans_RBut;
+    private javax.swing.JRadioButton George_RBut;
+    private javax.swing.JRadioButton Tom_RBut;
+    private javax.swing.JRadioButton Philip_RBut;
+    private javax.swing.JRadioButton Peter_RBut;
+    private javax.swing.JRadioButton David_RBut;
+    private javax.swing.JRadioButton Charles_RBut;
+    private javax.swing.JRadioButton Max_RBut;
+    private javax.swing.JRadioButton Paul_RBut;
+    private javax.swing.JRadioButton Richard_RBut;
+   
+    private javax.swing.JRadioButton Susan_RBut;
+    private javax.swing.JRadioButton Maria_RBut;
+    private javax.swing.JRadioButton Eric_RBut;
+    private javax.swing.JRadioButton Claire_RBut;
+    private javax.swing.JRadioButton Anne_RBut;
+    private javax.swing.JRadioButton Anita_RBut;
+    
+    
+    //CHARACTER BUTTONS
+    private javax.swing.JButton Max;
+    private javax.swing.JButton Frans;
+    private javax.swing.JButton George;
+    private javax.swing.JButton Tom;
+    private javax.swing.JButton Philip;
+    private javax.swing.JButton Peter;
+    private javax.swing.JButton David;
+    private javax.swing.JButton Charles;
+    private javax.swing.JButton Paul;
+    private javax.swing.JButton Richard;
+    private javax.swing.JButton Susan;
+    private javax.swing.JButton Maria;
+    private javax.swing.JButton Eric;
+    private javax.swing.JButton Claire;
+    private javax.swing.JButton Anne;
+    private javax.swing.JButton Anita;
+    
     private javax.swing.JPanel ChatBoxPanel;
     private javax.swing.JPanel Chatbox;
+    
+    
+    private int NUM_Guess=3;
     private javax.swing.JLabel NUM_Guess_Label;
-    private javax.swing.JLabel NUM_Questions_Label;
+
+    
+    
     private javax.swing.JButton Q_Assumption;
     private javax.swing.JButton Q_No;
     private javax.swing.JButton Q_Yes;
-    private javax.swing.JLabel QuestionsLeft_label;
-    private javax.swing.JLabel QuestionsLeft_label1;
+    private javax.swing.JLabel GuessesLeft_label;
     private javax.swing.JButton SendText;
     private javax.swing.JScrollPane chatHistory;
     private javax.swing.JLabel jLabel1;
@@ -58,42 +67,42 @@ public class MainPage extends javax.swing.JFrame {
     }
     private void initComponents() {
 
-        Char4 = new javax.swing.JButton();
+   
         jPanel1 = new javax.swing.JPanel();
-        CharBut_2 = new javax.swing.JButton();
-        CharBut_4 = new javax.swing.JButton();
-        CharBut_1 = new javax.swing.JButton();
-        CharBut_3 = new javax.swing.JButton();
-        CharBut_8 = new javax.swing.JButton();
-        CharBut_5 = new javax.swing.JButton();
-        CharBut_6 = new javax.swing.JButton();
-        CharBut_7 = new javax.swing.JButton();
-        CharBut_12 = new javax.swing.JButton();
-        CharBut_9 = new javax.swing.JButton();
-        CharBut_10 = new javax.swing.JButton();
-        CharBut_11 = new javax.swing.JButton();
-        CharBut_16 = new javax.swing.JButton();
-        CharBut_13 = new javax.swing.JButton();
-        CharBut_14 = new javax.swing.JButton();
-        CharBut_15 = new javax.swing.JButton();
+        Paul = new javax.swing.JButton();
+        Susan = new javax.swing.JButton();
+        Max = new javax.swing.JButton();
+        Richard = new javax.swing.JButton();
+        Anne = new javax.swing.JButton();
+        Maria = new javax.swing.JButton();
+        Eric = new javax.swing.JButton();
+        Claire = new javax.swing.JButton();
+        Tom = new javax.swing.JButton();
+        Anita = new javax.swing.JButton();
+        Frans = new javax.swing.JButton();
+        George = new javax.swing.JButton();
+        Charles = new javax.swing.JButton();
+        Philip = new javax.swing.JButton();
+        Peter = new javax.swing.JButton();
+        David = new javax.swing.JButton();
         yourCharImageLabel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Char4_RBut = new javax.swing.JRadioButton();
-        Char1_RBut = new javax.swing.JRadioButton();
-        Char2_RBut = new javax.swing.JRadioButton();
-        Char3_RBut = new javax.swing.JRadioButton();
-        Char5_RBut = new javax.swing.JRadioButton();
-        Char6_RBut = new javax.swing.JRadioButton();
-        Char7_RBut = new javax.swing.JRadioButton();
-        Char8_RBut = new javax.swing.JRadioButton();
-        Char10_RBut = new javax.swing.JRadioButton();
-        Char11_RBut = new javax.swing.JRadioButton();
-        Char12_RBut = new javax.swing.JRadioButton();
-        Char9_RBut = new javax.swing.JRadioButton();
-        Char14_RBut = new javax.swing.JRadioButton();
-        Char15_RBut = new javax.swing.JRadioButton();
-        Char16_RBut = new javax.swing.JRadioButton();
-        Char13_RBut = new javax.swing.JRadioButton();
+        Susan_RBut = new javax.swing.JRadioButton();
+        Max_RBut = new javax.swing.JRadioButton();
+        Paul_RBut = new javax.swing.JRadioButton();
+        Richard_RBut = new javax.swing.JRadioButton();
+        Maria_RBut = new javax.swing.JRadioButton();
+        Eric_RBut = new javax.swing.JRadioButton();
+        Claire_RBut = new javax.swing.JRadioButton();
+        Anne_RBut = new javax.swing.JRadioButton();
+        Frans_RBut = new javax.swing.JRadioButton();
+        George_RBut = new javax.swing.JRadioButton();
+        Tom_RBut = new javax.swing.JRadioButton();
+        Anita_RBut = new javax.swing.JRadioButton();
+        Peter_RBut = new javax.swing.JRadioButton();
+        David_RBut = new javax.swing.JRadioButton();
+        Charles_RBut = new javax.swing.JRadioButton();
+        Philip_RBut = new javax.swing.JRadioButton();
         ChatBoxPanel = new javax.swing.JPanel();
         Chatbox = new javax.swing.JPanel();
         chatHistory = new javax.swing.JScrollPane();
@@ -101,10 +110,8 @@ public class MainPage extends javax.swing.JFrame {
         SendText = new javax.swing.JButton();
         Q_No = new javax.swing.JButton();
         Q_Assumption = new javax.swing.JButton();
-        QuestionsLeft_label = new javax.swing.JLabel();
-        QuestionsLeft_label1 = new javax.swing.JLabel();
+        GuessesLeft_label = new javax.swing.JLabel();
         NUM_Guess_Label = new javax.swing.JLabel();
-        NUM_Questions_Label = new javax.swing.JLabel();
         yourCharNameLabel = new javax.swing.JLabel();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,53 +119,47 @@ public class MainPage extends javax.swing.JFrame {
 
 
 
-        CharBut_1.setText("Char1");
-        CharBut_1.addActionListener(new java.awt.event.ActionListener() {
+        Max.setText("Max");
+        Max.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_2.setText("Char2");
-        CharBut_2.addActionListener(new java.awt.event.ActionListener() {
+        Paul.setText("Paul");
+        Paul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_3.setText("Char1");
-        CharBut_3.addActionListener(new java.awt.event.ActionListener() {
+        Richard.setText("Max");
+        Richard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
+        
 
-        Char4.setText("Char1");
-        Char4.addActionListener(new java.awt.event.ActionListener() {
+
+
+        Maria.setText("Max");
+        Maria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-
-
-        CharBut_5.setText("Char1");
-        CharBut_5.addActionListener(new java.awt.event.ActionListener() {
+        Eric.setText("Max");
+        Eric.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_6.setText("Char1");
-        CharBut_6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-
-            }
-        });
-
-        CharBut_7.setText("Char1");
-        CharBut_7.addActionListener(new java.awt.event.ActionListener() {
+        Claire.setText("Max");
+        Claire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
@@ -167,62 +168,62 @@ public class MainPage extends javax.swing.JFrame {
 
 
 
-        CharBut_8.setText("Char1");
-        CharBut_8.addActionListener(new java.awt.event.ActionListener() {
+        Anne.setText("Max");
+        Anne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
-        CharBut_9.setText("Char1");
-        CharBut_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-
-            }
-        });
-
-        CharBut_10.setText("Char1");
-        CharBut_10.addActionListener(new java.awt.event.ActionListener() {
+        Anita.setText("Max");
+        Anita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_11.setText("Char1");
-        CharBut_11.addActionListener(new java.awt.event.ActionListener() {
+        Frans.setText("Max");
+        Frans.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_12.setText("Char1");
-        CharBut_12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-
-            }
-        });
-        CharBut_13.setText("Char1");
-        CharBut_13.addActionListener(new java.awt.event.ActionListener() {
+        George.setText("Max");
+        George.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_14.setText("Char1");
-        CharBut_14.addActionListener(new java.awt.event.ActionListener() {
+        Tom.setText("Max");
+        Tom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+            }
+        });
+        Philip.setText("Max");
+        Philip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_15.setText("Char1");
-        CharBut_15.addActionListener(new java.awt.event.ActionListener() {
+        Peter.setText("Max");
+        Peter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
         });
 
-        CharBut_16.setText("Char1");
-        CharBut_16.addActionListener(new java.awt.event.ActionListener() {
+        David.setText("Max");
+        David.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+            }
+        });
+
+        Charles.setText("Max");
+        Charles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
             }
@@ -249,37 +250,37 @@ public class MainPage extends javax.swing.JFrame {
 
 //TODO: set names of characters on radiobuttons
 
-        Char1_RBut.setText("jRadioButton1");
-        Char2_RBut.setText("jRadioButton1");
+        Max_RBut.setText("MAX");
+        Paul_RBut.setText("PAUL");
 
-        Char3_RBut.setText("jRadioButton1");
+        Richard_RBut.setText("RICHARD");
 
-        Char4_RBut.setText("jRadioButton1");
+        Susan_RBut.setText("SUSAN");
 
 
-        Char5_RBut.setText("jRadioButton1");
+        Maria_RBut.setText("MARIA");
 
-        Char6_RBut.setText("jRadioButton1");
+        Eric_RBut.setText("ERIC");
 
-        Char7_RBut.setText("jRadioButton1");
+        Claire_RBut.setText("CLAIRE");
 
-        Char8_RBut.setText("jRadioButton1");
+        Anne_RBut.setText("ANNE");
 
-        Char9_RBut.setText("jRadioButton1");
+        Anita_RBut.setText("ANITA");
 
-        Char10_RBut.setText("jRadioButton1");
+        Frans_RBut.setText("FRANS");
 
-        Char11_RBut.setText("jRadioButton1");
+        George_RBut.setText("GEORGE");
 
-        Char12_RBut.setText("jRadioButton1");
+        Tom_RBut.setText("TOM");
 
-        Char13_RBut.setText("jRadioButton1");
+        Philip_RBut.setText("PHILIP");
 
-        Char14_RBut.setText("jRadioButton1");
+        Peter_RBut.setText("PETER");
 
-        Char15_RBut.setText("jRadioButton1");
+        David_RBut.setText("DAVID");
 
-        Char16_RBut.setText("jRadioButton1");
+        Charles_RBut.setText("CHARLES");
 
 
 //TODO: ChatBoxField
@@ -399,27 +400,21 @@ public class MainPage extends javax.swing.JFrame {
         );
 
 
-        //TODO: STATES THE QUESTIONS AND GUESSES LEFT FIELD. NUM_GUESS IS A VARIABLE THAT CHANGES ACCORDINGLY
+        //TODO: STATES THE GUESSES LEFT FIELD. NUM_GUESS IS A VARIABLE THAT CHANGES ACCORDINGLY
 
-        QuestionsLeft_label.setFont(new java.awt.Font("Impact", 0, 13)); // NOI18N
-        QuestionsLeft_label.setForeground(new java.awt.Color(255, 51, 51));
-        QuestionsLeft_label.setText("QUESTIONS LEFT");
-
-        QuestionsLeft_label1.setFont(new java.awt.Font("Impact", 0, 13)); // NOI18N
-        QuestionsLeft_label1.setForeground(new java.awt.Color(255, 51, 51));
-        QuestionsLeft_label1.setText("GUESSES LEFT");
+        GuessesLeft_label.setFont(new java.awt.Font("Impact", 0, 13)); // NOI18N
+        GuessesLeft_label.setForeground(new java.awt.Color(255, 51, 51));
+        GuessesLeft_label.setText("GUESSES LEFT");
 
 
 
         NUM_Guess_Label.setBackground(new java.awt.Color(255, 255, 255));
         NUM_Guess_Label.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         NUM_Guess_Label.setForeground(new java.awt.Color(255, 51, 102));
-        NUM_Guess_Label.setText("11");
 
-        NUM_Questions_Label.setBackground(new java.awt.Color(255, 255, 255));
-        NUM_Questions_Label.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
-        NUM_Questions_Label.setForeground(new java.awt.Color(255, 51, 102));
-        NUM_Questions_Label.setText("11");
+        NUM_Guess_Label.setText((String.valueOf(NUM_Guess)));
+
+
 
         //TODO: SHOWS THE NAME OF THE RANDOMLY PICKED USER
 
@@ -437,13 +432,11 @@ public class MainPage extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(255, 255, 255)
-                                                .addComponent(NUM_Questions_Label)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(QuestionsLeft_label)
                                                 .addGap(87, 87, 87)
                                                 .addComponent(NUM_Guess_Label)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(QuestionsLeft_label1))
+                                                .addComponent(GuessesLeft_label))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(44, 44, 44)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,79 +448,79 @@ public class MainPage extends javax.swing.JFrame {
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addGap(2, 2, 2)
-                                                                .addComponent(Char1_RBut))
+                                                                .addComponent(Max_RBut))
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addGap(2, 2, 2)
-                                                                .addComponent(Char5_RBut))
+                                                                .addComponent(Maria_RBut))
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addGap(2, 2, 2)
-                                                                .addComponent(Char9_RBut))
+                                                                .addComponent(Anita_RBut))
                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addGap(7, 7, 7)
                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                        .addComponent(CharBut_1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addComponent(Max, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(Char2_RBut)
-                                                                                                .addComponent(CharBut_2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                .addComponent(Paul_RBut)
+                                                                                                .addComponent(Paul, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(CharBut_3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(Char3_RBut))
+                                                                                                .addComponent(Richard, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addComponent(Richard_RBut))
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(Char4_RBut)
-                                                                                                .addComponent(CharBut_4, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                                .addComponent(Susan_RBut)
+                                                                                                .addComponent(Susan, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                                                        .addComponent(CharBut_5, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addComponent(Maria, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(CharBut_6, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(Char6_RBut))
+                                                                                                .addComponent(Eric, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addComponent(Eric_RBut))
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(CharBut_7, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(Char7_RBut))
+                                                                                                .addComponent(Claire, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addComponent(Claire_RBut))
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(Char8_RBut)
-                                                                                                .addComponent(CharBut_8, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                                .addComponent(Anne_RBut)
+                                                                                                .addComponent(Anne, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                        .addComponent(CharBut_9, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addComponent(Anita, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(CharBut_10, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(Char10_RBut))
+                                                                                                .addComponent(Frans, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addComponent(Frans_RBut))
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(CharBut_11, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(Char11_RBut))
+                                                                                                .addComponent(George, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addComponent(George_RBut))
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(Char12_RBut)
-                                                                                                .addComponent(CharBut_12, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                                                                .addComponent(Tom_RBut)
+                                                                                                .addComponent(Tom, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                                                         .addGap(7, 7, 7)
-                                                                                        .addComponent(CharBut_13, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addComponent(Philip, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                                                                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                        .addComponent(Char13_RBut)
+                                                                                        .addComponent(Philip_RBut)
                                                                                         .addGap(58, 58, 58)))
                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(CharBut_14, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(Char14_RBut))
+                                                                                .addComponent(Peter, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(Peter_RBut))
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(CharBut_15, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(Char15_RBut))
+                                                                                .addComponent(David, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(David_RBut))
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(Char16_RBut)
-                                                                                .addComponent(CharBut_16, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                                                                .addComponent(Charles_RBut)
+                                                                                .addComponent(Charles, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(79, 79, 79)
                                                 .addComponent(ChatBoxPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -538,36 +531,36 @@ public class MainPage extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(NUM_Questions_Label)
-                                        .addComponent(QuestionsLeft_label)
+
+
                                         .addComponent(NUM_Guess_Label)
-                                        .addComponent(QuestionsLeft_label1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(GuessesLeft_label, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(CharBut_2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(Paul, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Max, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Richard, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Susan, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(1, 1, 1)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(Char1_RBut)
-                                                        .addComponent(Char2_RBut)
-                                                        .addComponent(Char4_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(Char3_RBut))
+                                                        .addComponent(Max_RBut)
+                                                        .addComponent(Paul_RBut)
+                                                        .addComponent(Susan_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(Richard_RBut))
                                                 .addGap(18, 18, 18)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(CharBut_6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(CharBut_5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(CharBut_7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(CharBut_8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(Eric, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(Maria, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(Claire, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(Anne, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(1, 1, 1)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(Char5_RBut)
-                                                        .addComponent(Char6_RBut)
-                                                        .addComponent(Char8_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(Char7_RBut))
+                                                        .addComponent(Maria_RBut)
+                                                        .addComponent(Eric_RBut)
+                                                        .addComponent(Anne_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(Claire_RBut))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(21, 21, 21)
@@ -578,28 +571,28 @@ public class MainPage extends javax.swing.JFrame {
                                                 .addComponent(yourCharNameLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(CharBut_10, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_9, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_11, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_12, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(Frans, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Anita, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(George, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Tom, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(1, 1, 1)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(Char9_RBut)
-                                        .addComponent(Char10_RBut)
-                                        .addComponent(Char12_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Char11_RBut))
+                                        .addComponent(Anita_RBut)
+                                        .addComponent(Frans_RBut)
+                                        .addComponent(Tom_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(George_RBut))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(CharBut_14, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_13, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_15, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CharBut_16, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(Peter, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Philip, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(David, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Charles, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(1, 1, 1)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(Char13_RBut)
-                                        .addComponent(Char14_RBut)
-                                        .addComponent(Char16_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Char15_RBut))
+                                        .addComponent(Philip_RBut)
+                                        .addComponent(Peter_RBut)
+                                        .addComponent(Charles_RBut, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(David_RBut))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                                 .addComponent(ChatBoxPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))
