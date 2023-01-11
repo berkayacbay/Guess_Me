@@ -11,8 +11,8 @@ import java.net.URL;
 
 public class EnterGamePage extends JFrame {
 
-    JLabel label_welcome, label_intro;
-    JButton HostGameButton;
+    JLabel label_welcome;
+    JButton StartGameButton;
 
     public EnterGamePage() throws IOException {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,12 +29,12 @@ public class EnterGamePage extends JFrame {
         label_welcome.setForeground(Color.YELLOW);
 
 
-        HostGameButton = new JButton("HOST A GAME");
-        HostGameButton.setBounds(300, 400, 200, 50);
-       // HostGameButton.setBorderPainted(false);
-        HostGameButton.setForeground(Color.RED);
-        HostGameButton.setEnabled(true);
-        HostGameButton.addActionListener(new HostGameButton_Action());
+        StartGameButton = new JButton("START");
+        StartGameButton.setBounds(300, 400, 200, 50);
+       // StartGameButton.setBorderPainted(false);
+        StartGameButton.setForeground(Color.RED);
+        StartGameButton.setEnabled(true);
+        StartGameButton.addActionListener(new StartGameButton_Action());
 
 
 
@@ -48,12 +48,6 @@ public class EnterGamePage extends JFrame {
 
 
 
-
-
-
-
-
-
         // BufferedImage myPicture = ImageIO.read(new URL("https://raw.githubusercontent.com/berkayacbay/Guess_Me/51765f3f37a61dd66dcedc6dbfd0500390593a7f/src/src/GUI/images/gameLogo/guessMeLogo.png?token=GHSAT0AAAAAAB35EYEV7E6LE3OPFNEZAU5AY5K74IQ"));
         // BufferedImage scaledPic = resize(myPicture, 200, 200);
         JLabel picLabel=new JLabel();
@@ -62,8 +56,6 @@ public class EnterGamePage extends JFrame {
                 .getImage()
                 .getScaledInstance(200,200, Image.SCALE_DEFAULT));
 
-
-        picLabel.setSize(200,200);
         picLabel.setIcon(image);
 
 
@@ -73,7 +65,7 @@ public class EnterGamePage extends JFrame {
         picLabel.setBounds(300, 100, 200, 200);
         this.add(picLabel, SwingConstants.CENTER);
         this.getContentPane().setBackground(Color.ORANGE);
-        this.add(HostGameButton);
+        this.add(StartGameButton);
 
 
 
@@ -86,7 +78,7 @@ public class EnterGamePage extends JFrame {
 
 
 
-    static class HostGameButton_Action implements ActionListener {
+    static class StartGameButton_Action implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             MainPage.run();
 

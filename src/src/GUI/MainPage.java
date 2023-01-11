@@ -2,6 +2,8 @@ package GUI;
 import Socket.Client;
 import Socket.Game;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 
 public class MainPage extends javax.swing.JFrame {
@@ -17,6 +19,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JRadioButton Max_RBut;
     private javax.swing.JRadioButton Paul_RBut;
     private javax.swing.JRadioButton Richard_RBut;
+
    
     private javax.swing.JRadioButton Susan_RBut;
     private javax.swing.JRadioButton Maria_RBut;
@@ -64,12 +67,94 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel yourCharImageLabel;
     private javax.swing.JLabel yourCharNameLabel;
 
+
+    private ImageIcon MaxPic,PaulPic,RichardPic,SusanPic,MariaPic,EricPic,ClairePic,AnnePic,AnitaPic,
+                        FransPic,GeorgePic,TomPic,PhilipPic,PeterPic,DavidPic,CharlesPic;
+
     public MainPage() {
         initComponents();
     }
     private void initComponents() {
 
-   
+        MaxPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char1-Max.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        PaulPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char2-Paul.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+
+        RichardPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char3-Richard.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+
+        SusanPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char4-Susan.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        MariaPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char5-Maria.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        EricPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char6-Eric.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        ClairePic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char7-Claire.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        AnnePic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char8-Anne.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        AnitaPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char9-Anita.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        FransPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char10-Frans.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        GeorgePic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char11-George.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        TomPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char12-Tom.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        PhilipPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char13-Philip.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        PeterPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char14-Peter.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        DavidPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char15-David.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+        CharlesPic=new ImageIcon(new ImageIcon
+                ("src/src/GUI/images/characters/Char16-Charles.png")
+                .getImage()
+                .getScaledInstance(100,120, Image.SCALE_DEFAULT));
+
+
+
+
+
+
+
+
+
+
+
+
+
         jPanel1 = new javax.swing.JPanel();
         Paul = new javax.swing.JButton();
         Susan = new javax.swing.JButton();
@@ -121,28 +206,39 @@ public class MainPage extends javax.swing.JFrame {
 
 
 
-        Max.setText("Max");
-
+        Max.setIcon(MaxPic);
         Max.addActionListener(new java.awt.event.ActionListener() {
-            int count=0;
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                count++;
+               count++;
                 if(count%2==0){
-                    Max.setText("abc");
-                }
-                else{
+                    Max.setIcon(null);
 
-                    Max.setText("Max");
+
+                }else{
+                    Max.setIcon(MaxPic);
 
                 }
+
+
 
 
             }
         });
 
-        Paul.setText("Paul");
+        Paul.setIcon(PaulPic);
         Paul.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Paul.setIcon(null);
+
+
+                }else{
+                    Paul.setIcon(PaulPic);
+
+                }
 
             }
         });
@@ -176,9 +272,20 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        Richard.setText("Max");
+
+        Richard.setIcon(RichardPic);
         Richard.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Richard.setIcon(null);
+
+
+                }else{
+                    Richard.setIcon(RichardPic);
+
+                }
 
             }
         });
@@ -187,23 +294,61 @@ public class MainPage extends javax.swing.JFrame {
 
 
 
-        Maria.setText("Max");
+        Maria.setIcon(MariaPic);
         Maria.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Maria.setIcon(null);
+
+
+                }else{
+                    Maria.setIcon(MariaPic);
+
+                }
+
+
 
             }
         });
 
-        Eric.setText("Max");
+        Eric.setIcon(EricPic);
         Eric.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Eric.setIcon(null);
+
+
+                }else{
+                    Eric.setIcon(EricPic);
+
+                }
+
+
+
+
+
 
             }
         });
 
-        Claire.setText("Max");
+        Claire.setIcon(ClairePic);
         Claire.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Claire.setIcon(null);
+
+
+                }else{
+                    Claire.setIcon(ClairePic);
+
+                }
 
             }
         });
@@ -211,81 +356,195 @@ public class MainPage extends javax.swing.JFrame {
 
 
 
-        Anne.setText("Max");
+        Anne.setIcon(AnnePic);
         Anne.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Anne.setIcon(null);
+
+
+                }else{
+                    Anne.setIcon(AnnePic);
+
+                }
 
             }
         });
-        Anita.setText("Max");
+        Anita.setIcon(AnitaPic);
         Anita.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Anita.setIcon(null);
+
+
+                }else{
+                    Anita.setIcon(AnitaPic);
+
+                }
+
 
             }
         });
 
-        Frans.setText("Max");
+        Frans.setIcon(FransPic);
         Frans.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Frans.setIcon(null);
+
+
+                }else{
+                    Frans.setIcon(FransPic);
+
+                }
 
             }
         });
 
-        George.setText("Max");
+        George.setIcon(GeorgePic);
         George.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    George.setIcon(null);
+
+
+                }else{
+                    George.setIcon(GeorgePic);
+
+                }
 
             }
         });
 
-        Tom.setText("Max");
+        Tom.setIcon(TomPic);
         Tom.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Tom.setIcon(null);
+
+
+                }else{
+                    Tom.setIcon(TomPic);
+
+                }
+
 
             }
         });
-        Philip.setText("Max");
+        Philip.setIcon(PhilipPic);
         Philip.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Philip.setIcon(null);
+
+
+                }else{
+                    Philip.setIcon(PhilipPic);
+
+                }
+
+
+
+
 
             }
         });
 
-        Peter.setText("Max");
+        Peter.setIcon(PeterPic);
         Peter.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Peter.setIcon(null);
+
+
+                }else{
+                    Peter.setIcon(PeterPic);
+
+                }
+
+
+
 
             }
         });
 
-        David.setText("Max");
+        Susan.setIcon(SusanPic);
+        Susan.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Susan.setIcon(null);
+
+
+                }else{
+                    Susan.setIcon(SusanPic);
+
+                }
+
+
+
+            }
+        });
+
+
+
+        David.setIcon(DavidPic);
         David.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    David.setIcon(null);
+
+
+                }else{
+                    David.setIcon(DavidPic);
+
+                }
+
+
 
             }
         });
 
-        Charles.setText("Max");
+        Charles.setIcon(CharlesPic);
         Charles.addActionListener(new java.awt.event.ActionListener() {
+            int count=1;
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                count++;
+                if(count%2==0){
+                    Charles.setIcon(null);
+
+
+                }else{
+                    Charles.setIcon(CharlesPic);
+
+                }
+
+
+
+
 
             }
         });
 
        //TODO: Pick a random character and set the character pic label on "yourCharImageLabel"
 
-        javax.swing.GroupLayout yourCharImageLabelLayout = new javax.swing.GroupLayout(yourCharImageLabel);
-        yourCharImageLabel.setLayout(yourCharImageLabelLayout);
-
-        yourCharImageLabelLayout.setHorizontalGroup(
-                yourCharImageLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 94, Short.MAX_VALUE)
-        );
-
-        yourCharImageLabelLayout.setVerticalGroup(
-                yourCharImageLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 100, Short.MAX_VALUE)
-        );
 
 
 
@@ -671,84 +930,107 @@ public class MainPage extends javax.swing.JFrame {
     private void randomCharacterGenerator(){
         Random rand=new Random();
         int index=rand.nextInt(16);
+        JLabel imageLabel=new JLabel();
+
 
 
         switch(index) {
             case 0:
                 // MAX
                 yourCharNameLabel.setText("Max");
+                imageLabel.setIcon(MaxPic);
+
+
 
                 break;
             case 1:
                 // PAUL
                 yourCharNameLabel.setText("Paul");
+                imageLabel.setIcon(PaulPic);
                 break;
             case 2:
                 // RICHARD
                 yourCharNameLabel.setText("Richard");
+                imageLabel.setIcon(RichardPic);
                 break;
             case 3:
                 // SUSAN
                 yourCharNameLabel.setText("Susan");
+                imageLabel.setIcon(SusanPic);
                 break;
             case 4:
                 //MARIA
                 yourCharNameLabel.setText("Maria");
+                imageLabel.setIcon(MariaPic);
                 break;
             case 5:
                 // ERIC
                 yourCharNameLabel.setText("Eric");
+                imageLabel.setIcon(EricPic);
                 break;
             case 6:
                 // CLAIRE
                 yourCharNameLabel.setText("Claire");
+                imageLabel.setIcon(ClairePic);
                 break;
             case 7:
                 // ANNE
                 yourCharNameLabel.setText("Anne");
+                imageLabel.setIcon(AnnePic);
                 break;
             case 8:
                 // ANITA
                 yourCharNameLabel.setText("Anita");
+                imageLabel.setIcon(AnitaPic);
                 break;
             case 9:
                 // FRANS
                 yourCharNameLabel.setText("Frans");
+                imageLabel.setIcon(FransPic);
                 break;
             case 10:
                 // GEORGE
                 yourCharNameLabel.setText("George");
+                imageLabel.setIcon(GeorgePic);
                 break;
             case 11:
                 // TOM
                 yourCharNameLabel.setText("Tom");
+                imageLabel.setIcon(TomPic);
                 break;
             case 12:
                 // PHILIP
                 yourCharNameLabel.setText("Philip");
+                imageLabel.setIcon(PhilipPic);
                 break;
             case 13:
                 // PETER
                 yourCharNameLabel.setText("Peter");
+                imageLabel.setIcon(PeterPic);
                 break;
             case 14:
                 // DAVID
                 yourCharNameLabel.setText("David");
+                imageLabel.setIcon(DavidPic);
                 break;
             case 15:
                 // CHARLES
                 yourCharNameLabel.setText("Charles");
+                imageLabel.setIcon(CharlesPic);
                 break;
 
             default:
                 // NULL
         }
 
+        yourCharImageLabel.add(imageLabel,SwingConstants.CENTER);
+
     }
 
 
             public static void run() {
                 new MainPage().setVisible(true);
+
             }
 
 
