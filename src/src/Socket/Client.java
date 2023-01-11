@@ -11,11 +11,12 @@ public class Client {
     private static DataInputStream in;
     private static Socket socket;
     public static String receivemessage;
+    private static  Game game;
     public Client() throws IOException {
         socket = new Socket("3.121.247.252", 100);
         out= new DataOutputStream(socket.getOutputStream());
         in= new DataInputStream(socket.getInputStream());
-
+       game =new Game();
 
 
         Thread receiver = new Thread(new Runnable() {
@@ -70,7 +71,10 @@ public class Client {
                 }
             }
         });
+
         sender.start();
+        game.examineMessage();
+        game.continueGame();
     }
 
 }

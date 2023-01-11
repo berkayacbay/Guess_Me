@@ -12,7 +12,7 @@ public class Game {
 
 
 
-    public void examineMessage() {
+    public  void examineMessage() {
         if (receivemessage.startsWith("/Assumption")) {
             chanceToAssumption--;
             guessMode = true;
