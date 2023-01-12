@@ -2,6 +2,7 @@ package Socket;
 
 import GUI.MainPage;
 
+import javax.swing.*;
 import java.io.*;
 import java.net.*;
 
@@ -27,15 +28,14 @@ public class Client {
                     msg = in.readUTF();
                     receivemessage=msg;
                     while(msg!=null){
-                        AllChat=AllChat+msg;
-                   //     a.cevap.setText(cevap);
+                        AllChat=AllChat+"\n"+msg;
                         MainPage.chatHistory.setText(AllChat);
                         game.continueGame();
                         msg = in.readUTF();
                         receivemessage=msg;
                         game.continueGame();
                     }
-                    System.out.println("Server out of service");
+                    JOptionPane.showMessageDialog(null,"Server out of Service");
                     out.close();
                     socket.close();
                 } catch (IOException e) {
@@ -57,7 +57,7 @@ public class Client {
                 while(true){
                     String message;
                     message =Sender_msg;
-                    AllChat=AllChat+message;
+                    AllChat=AllChat+"\n"+message;
                     try {
                         out.writeUTF(message);
                     } catch (IOException e) {
@@ -69,8 +69,6 @@ public class Client {
                         e.printStackTrace();
                     }
                     MainPage.chatHistory.setText(AllChat);
-                    //   a.soru.setText(message);
-                    //    MainPage.chatHistory.set
                     break;
                 }
             }
