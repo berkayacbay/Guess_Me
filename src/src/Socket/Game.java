@@ -23,12 +23,21 @@ public class Game {
         }
     }
 
+    public void gamelose(String msg){
+        if(guessMode==false && Client.receivemessage.startsWith("/Assumption") &&msg.equals("/Yes")){
+            JOptionPane.showMessageDialog(null,"GAME LOSE!!!");
+            System.exit(0);
+
+        }
+
+    }
+
     public void continueGame() {
         if (IsGameWon == false) {
             examineMessage();
         }
         if (IsGameWon){
-            JOptionPane.showMessageDialog(null,"GAME WON");
+            JOptionPane.showMessageDialog(null,"GAME WON!!!");
             System.exit(0);
         }
     }

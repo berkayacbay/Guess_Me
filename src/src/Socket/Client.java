@@ -58,6 +58,7 @@ public class Client {
                     String message;
                     message =Sender_msg;
                     AllChat=AllChat+"\n"+message;
+                    game.gamelose(message);
                     try {
                         out.writeUTF(message);
                     } catch (IOException e) {
