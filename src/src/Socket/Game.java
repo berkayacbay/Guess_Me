@@ -3,7 +3,7 @@ package Socket;
 import javax.swing.*;
 
 public class Game {
-    private String receivemessage;
+    public static String receivemessage;
 
 
 
@@ -15,20 +15,20 @@ public class Game {
 
 
     public  void examineMessage() {
-        if (receivemessage.startsWith("/Assumption")) {
+        if (Client.receivemessage.startsWith("/Assumption")) {
             chanceToAssumption--;
             guessMode = true;
         }
-        if (receivemessage.startsWith("/Yes") && (guessMode == true)) {
+        if (Client.receivemessage.startsWith("/Yes") && (guessMode == true)) {
             IsGameWon = true;
         }
-        if (receivemessage.startsWith("/No") && (guessMode == true)) {
+        if (Client.receivemessage.startsWith("/No") && (guessMode == true)) {
             guessMode = false;
         }
     }
 
     public void continueGame() {
-        while (IsGameWon == false) {
+        if (IsGameWon == false) {
             examineMessage();
         }
         if (IsGameWon){
