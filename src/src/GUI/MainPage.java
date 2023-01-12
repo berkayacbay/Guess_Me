@@ -268,6 +268,8 @@ public class MainPage extends javax.swing.JFrame {
                     Chatbox.setText("/Assumption ");
                     NUM_Guess--;
                     NUM_Guess_Label.setText(String.valueOf(NUM_Guess));
+                    Game.guessMode=true;
+                    Game.chanceToAssumption--;
                 }
             }
         });

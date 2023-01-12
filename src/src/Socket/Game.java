@@ -8,17 +8,13 @@ public class Game {
 
 
     public static int chanceToAssumption = 3; // == 0 --> Assumption tuşuna basınca chate yazma !!!
-    private boolean guessMode = false;
+    public static boolean guessMode = false;
     private boolean IsGameWon = false;
 
 
 
 
     public  void examineMessage() {
-        if (Client.receivemessage.startsWith("/Assumption")) {
-            chanceToAssumption--;
-            guessMode = true;
-        }
         if (Client.receivemessage.startsWith("/Yes") && (guessMode == true)) {
             IsGameWon = true;
         }
@@ -33,6 +29,7 @@ public class Game {
         }
         if (IsGameWon){
             JOptionPane.showMessageDialog(null,"GAME WON");
+            System.exit(0);
         }
     }
 }

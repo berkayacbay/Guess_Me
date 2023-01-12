@@ -26,7 +26,7 @@ public class Client {
                 try {
                     msg = in.readUTF();
                     receivemessage=msg;
-                    game.continueGame();
+
                     while(msg!=null){
                         AllChat=AllChat+msg;
                    //     a.cevap.setText(cevap);
@@ -43,6 +43,7 @@ public class Client {
             }
         });
         receiver.start();
+        game.continueGame();
     }
 
     public static  void send(String Sender_msg){
@@ -55,7 +56,6 @@ public class Client {
                     String message;
                     message =Sender_msg;
                     AllChat=AllChat+message;
-                    receivemessage = message;
                     try {
                         out.writeUTF(message);
                     } catch (IOException e) {
