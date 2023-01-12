@@ -11,7 +11,7 @@ public class Client {
     private static DataOutputStream out;
     private static DataInputStream in;
     private static Socket socket;
-    public static String receivemessage;
+    public static String receivemessage="";
     private static  Game game;
     public Client() throws IOException {
         socket = new Socket("3.121.247.252", 100);
@@ -58,7 +58,6 @@ public class Client {
                     String message;
                     message =Sender_msg;
                     AllChat=AllChat+"\n"+message;
-                    game.gamelose(message);
                     try {
                         out.writeUTF(message);
                     } catch (IOException e) {

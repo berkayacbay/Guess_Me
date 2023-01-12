@@ -23,14 +23,6 @@ public class Game {
         }
     }
 
-    public void gamelose(String msg){
-        if(guessMode==false && Client.receivemessage.startsWith("/Assumption") &&msg.equals("/Yes")){
-            JOptionPane.showMessageDialog(null,"GAME LOSE!!!");
-            System.exit(0);
-
-        }
-
-    }
 
     public void continueGame() {
         if (IsGameWon == false) {
