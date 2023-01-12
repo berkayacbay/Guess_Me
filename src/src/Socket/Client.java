@@ -26,13 +26,14 @@ public class Client {
                 try {
                     msg = in.readUTF();
                     receivemessage=msg;
-                    game.continueGame();
                     while(msg!=null){
                         AllChat=AllChat+msg;
                    //     a.cevap.setText(cevap);
                         MainPage.chatHistory.setText(AllChat);
+                        game.continueGame();
                         msg = in.readUTF();
                         receivemessage=msg;
+                        game.continueGame();
                     }
                     System.out.println("Server out of service");
                     out.close();
@@ -40,6 +41,7 @@ public class Client {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
             }
         });
         receiver.start();
@@ -75,7 +77,6 @@ public class Client {
         });
 
         sender.start();
-        game.continueGame();
     }
 
 }
